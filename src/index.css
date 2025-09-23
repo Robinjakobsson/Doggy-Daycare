@@ -1,0 +1,158 @@
+body {
+  background-color: #F5F5DC;
+  font-family: 'Poppins', sans-serif;
+  transition: .5s;
+}
+
+button {
+  width: 10rem;
+  height: 2rem;
+  font-family: 'Poppins';
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: .3s;
+}
+
+button:hover {
+  width: 11rem;
+  cursor: pointer;
+  
+}
+
+ 
+
+ /*-- CATALOGUEPAGE --*/
+
+.catalogueContainer input {
+  height: 2rem;
+  width: 11rem;
+  font-family: 'Poppins';
+  border: 2px solid transparent;
+  border-radius: 8px;
+  margin-right: 35px;
+  padding-left: 5px;
+  transition: 0.5s;
+}
+
+.catalogueContainer input:focus {
+  outline: none;
+  border: 2px solid #3CB371;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  width: 30%;
+}
+
+.listSection {
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr) ;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.listSection h2 {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 5px 0;
+  text-align: center;
+}
+
+
+.listSection p {
+  color: #F5F5DC;
+  text-align: center;
+}
+
+.listSection li {
+  width: 300px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px; 
+  padding: 15px;
+  background-color: #3CB371;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: .3s;
+}
+
+.listSection li:hover {
+  transform: translateY(-5px);
+  background-color: #2E8B57;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+}
+
+.listSection img {
+  width: 300px;
+  height: 150px;
+  border-radius: 16px; 
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.link {
+  display: flex;
+  width: 160px;
+  height: 2rem;
+  background-color: #ffffff;
+  font-family: 'Poppins';
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: .3s;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: .3s;
+}
+
+.link:hover {
+  transform: scale(1.05);
+}
+
+.link:active {
+  transform: scale(0.95);
+}
+
+/*-- DOG DETAILPAGE --*/
+
+.componentContainer {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+}
+
+.imageWrapper {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 3s ease;
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.1);
+}
+
+
+
+.dogDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  background-color: #3CB371;
+  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
