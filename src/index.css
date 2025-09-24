@@ -1,4 +1,4 @@
-body {
+body, html {
   background-color: #F5F5DC;
   font-family: 'Poppins', sans-serif;
   transition: .5s;
@@ -21,6 +21,11 @@ button:hover {
   background-color: #8c6f62;
   
 }
+
+button:active {
+  transform: scale(0.95);
+}
+
  /*-- CATALOGUEPAGE --*/
 .searchField {
   height: 2rem;
@@ -149,6 +154,23 @@ button:hover {
   color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/*-- MEDIA QUERIES --*/
+
+@media (max-width: 1100px) {
+  .listSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .listSection {
+    display: flex;
+    flex-direction: column;
+  } 
 }
 
 
