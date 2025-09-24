@@ -7,16 +7,16 @@ const CataloguePage = ({dogs}) => {
     const [searchInput, setSearchInput] = useState('');
     const [genderFilter, setGenderFilter] = useState('all');
     const [favorites, setFavorites] = useState(() => {
-        const savedFavorites = localStorage.getItem('favorites')
+    const savedFavorites = localStorage.getItem('favorites')
         return savedFavorites ? JSON.parse(savedFavorites) : [];
     })
 
-
+    // saving favorites locally on browser
     useEffect (() => {
         localStorage.setItem('favorites', JSON.stringify(favorites))
     }, [favorites])
 
-
+        // dont know why this works but it does.
         if (!dogs) return <CircularProgress/>;
 
         
@@ -45,11 +45,11 @@ const CataloguePage = ({dogs}) => {
             setSearchInput={setSearchInput}
             />
 
-            <div>
+            <section className="genderSection">
             <button onClick={() => setGenderFilter('all')}>Show all</button>
             <button onClick={() => setGenderFilter('female')}>Female</button>
             <button onClick={() => setGenderFilter('male')}>Male</button>
-            </div>
+            </section>
 
             <DogList 
             filteredDogs={filteredDogs}
