@@ -5,13 +5,14 @@ import { createHashRouter, RouterProvider } from 'react-router-dom'
 import CataloguePage from './pages/CataloguePage'
 import WelcomePage from './pages/WelcomePage'
 import DogDetailPage from './pages/DogDetailPage'
+import ErrorPage from './pages/ErrorPage'
 
 function App() {
   const url = 'https://api.jsonbin.io/v3/b/68cd3354d0ea881f408302f7'
   const [dogs, setDogs] = useState(null);
 
 
-  /**
+        /**
          * API call, fetches dogs and sets dogs to {dogs}
          */
 
@@ -46,22 +47,22 @@ function App() {
         }, [])
 
 
-
+// Created router here because i wanted to send the {dogs} to different pages
 const router = createHashRouter([
   {
     path: '/',
     element: <WelcomePage/>,
-    errorElement: <h2>Fel</h2>
+    errorElement: <ErrorPage/>
   },
   {
     path: '/cataloguePage',
     element: <CataloguePage dogs={dogs}/>,
-    errorElement: <h2>Fel</h2>
+    errorElement: <ErrorPage/>
   },
   {
     path: 'dogDetailPage/:id',
     element: <DogDetailPage dogs={dogs}/>,
-    errorElement: <h2>Fel</h2>
+    errorElement: <ErrorPage/>
   }
 ])
 
