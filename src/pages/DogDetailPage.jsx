@@ -12,12 +12,10 @@ const DogDetailPage = ({dogs}) => {
 
     return (
         <>
-            
            <section className="componentContainer">
             <ZoomImage dog={dog} />  
-          <DogDetailsList dog={dog} />
+            <DogDetailsList dog={dog} />
            </section>
-          
         </>
     )
 }

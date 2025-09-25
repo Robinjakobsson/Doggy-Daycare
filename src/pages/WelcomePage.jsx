@@ -9,7 +9,7 @@ const WelcomePage = () => {
         <>
         <section className="welcomeSection">
             <h1>Welcome to Doggy DayCare</h1>
-            <Link to={{pathname: "/cataloguePage"}}>Enter</Link>
+            <Link className="link" to={{pathname: "/cataloguePage"}}>Enter</Link>
             </section>
         </>
     )

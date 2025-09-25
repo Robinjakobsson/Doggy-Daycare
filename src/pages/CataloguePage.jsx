@@ -21,8 +21,8 @@ const CataloguePage = ({dogs}) => {
 
         
         /**
-         *  Filter dog based on what is searched for, if searchInput & genderFilter = 'all' return all dogs
-         * if searchInput is empty and genderFilter is 'male' return all male dogs.
+         *  Filter dog based on what is searched for, if searchInput is empty & genderFilter = 'all' return all dogs
+         * if searchinput is not empty check if name == search
          */
 
     const filteredDogs = dogs.filter(dog => {
