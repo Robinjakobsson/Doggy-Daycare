@@ -3,7 +3,7 @@ import DogList from "../components/DogList";
 import SearchField from "../components/SearchField";
 import CircularProgress from '@mui/material/CircularProgress';
 
-const CataloguePage = ({dogs}) => {
+const CataloguePage = ({dogs, addNewDog}) => {
     const [searchInput, setSearchInput] = useState('');
     const [genderFilter, setGenderFilter] = useState('all');
     const [favorites, setFavorites] = useState(() => {
@@ -46,6 +46,7 @@ const CataloguePage = ({dogs}) => {
             />
 
             <section className="genderSection">
+            <button onClick={() => addNewDog()} >Add</button>
             <button onClick={() => setGenderFilter('all')}>Show all</button>
             <button onClick={() => setGenderFilter('female')}>Female</button>
             <button onClick={() => setGenderFilter('male')}>Male</button>
