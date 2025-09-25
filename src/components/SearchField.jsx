@@ -3,7 +3,7 @@ const SearchField = ({searchInput, setSearchInput}) => {
         <>
          <input type="text"
              className="searchField"
-             placeholder="Search for dog"
+             placeholder="Name or breed"
              value={searchInput}
              onChange={(e) => setSearchInput(e.target.value)} />
 
