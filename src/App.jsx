@@ -49,6 +49,7 @@ function App() {
                 console.log(json);
 
                 /** Adding id property to all dogs  * */
+                // To blind to see that chipNumber is unique so i added this
                 const addIds = json.record.record.map((dog, index) =>  (
                     {...dog,
                         id: index
